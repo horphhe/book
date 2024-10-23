@@ -17,25 +17,32 @@
 
    
 <main>
-  <div id="flipbook">
-	<div class="hard"> Turn.js </div>
-	<div class="hard"></div>
-	<div> Page 1 </div>
-	<div> Page 2 </div>
-	<div> Page 3 </div>
-	<div> Page 4 </div>
-	<div class="hard"></div>
-	<div class="hard"></div>
-</div>
-  <div class="container1">
-    <img id="draggableImage1" src="https://horphhe.github.io/book/tierspaysage/img/edition_origine.png" alt="edition_origine" style="cursor: grab; left: 362px; top: 79px;">
-  </div>
+   <div id="book">
+        <!-- Chaque "page" du livre -->
+        <div class="page">Page 1</div>
+        <div class="page">Page 2</div>
+        <div class="page">Page 3</div>
+        <div class="page">Page 4</div>
+    </div>
 
-  <div class="container2">
-    <img id="draggableImage2" src="https://horphhe.github.io/book/tierspaysage/img/edition_rapport_societe.png" alt="edition_rapport_societe" style="cursor: grab; left: 136px; top: 34px;">
-  </div>
+    <!-- Script jQuery (assurez-vous que le chemin est correct) -->
+    <script src="https://horphhe.github.io/book/tierspaysage/jquery-3.7.1.min.js"></script>
 
-  <script src="https://horphhe.github.io/book/tierspaysage/script.js"></script>
+    <!-- Script Turn.js (assurez-vous que le chemin est correct) -->
+    <script src="https://horphhe.github.io/book/tierspaysage/turn.js"></script>
+
+    <!-- Initialisation de Turn.js -->
+    <script>
+        // Ce code s'exécute lorsque le document est prêt
+        $(document).ready(function(){
+            // Sélectionne l'élément avec l'ID "book" et applique Turn.js
+            $("#book").turn({
+                width: 600,      // Largeur du livre
+                height: 400,     // Hauteur du livre
+                autoCenter: true // Centre automatiquement le livre dans la fenêtre
+            });
+        });
+    </script>
 
 </main>
 
