@@ -32,17 +32,24 @@
     <script src="https://horphhe.github.io/book/tierspaysage/turn.js"></script>
 
     <!-- Initialisation de Turn.js -->
-    <script>
-        // Ce code s'exécute lorsque le document est prêt
-        $(document).ready(function(){
-            // Sélectionne l'élément avec l'ID "book" et applique Turn.js
-            $("#book").turn({
-                width: 600,      // Largeur du livre
-                height: 400,     // Hauteur du livre
-                autoCenter: true // Centre automatiquement le livre dans la fenêtre
-            });
-        });
-    </script>
+   <script>
+$(document).ready(function() {
+    $("#flipbook").turn({
+        width: 800,
+        height: 600,
+        autoCenter: true,
+        pages: 60,  // Nombre total de pages
+        when: {
+            turning: function(event, page, view) {
+                // Si la page est vide, charge le contenu
+                if ($("#page" + page).html() === "") {
+                    $("#page" + page).html("<h1>Page " + page + "</h1><p>Contenu chargé dynamiquement pour la page " + page + "</p>");
+                }
+            }
+        }
+    });
+});
+</script>
 
 </main>
 
