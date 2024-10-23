@@ -15,11 +15,17 @@ function makeImageDraggable(imageId, containerSelector) {
     offsetX = e.clientX - image.offsetLeft;
     offsetY = e.clientY - image.offsetTop;
     image.style.cursor = 'grabbing';
+    
+    // Empêche le comportement par défaut
+    e.preventDefault();
   });
 
   // Gère le mouvement de l'image
   document.addEventListener('mousemove', (e) => {
     if (isDragging) {
+      // Empêche le comportement par défaut
+      e.preventDefault();
+      
       const containerRect = container.getBoundingClientRect();
       let left = e.clientX - offsetX;
       let top = e.clientY - offsetY;
@@ -33,10 +39,15 @@ function makeImageDraggable(imageId, containerSelector) {
     }
   });
 
-  // Arrête de traîner l'image lorsqu'on relâche le bouton de la souris
-  document.addEventListener('mouseup', () => {
-    isDragging = false;
-    image.style.cursor = 'grab';
+  // Arrête de traîner l'image lorsque le bouton de la souris est relâché
+  document.addEventListener('mouseup', (e) => {
+    if (isDragging) {
+      isDragging = false;
+      image.style.cursor = 'grab';
+      
+      // Empêche le comportement par défaut lors de la dépose
+      e.preventDefault();
+    }
   });
 }
 
