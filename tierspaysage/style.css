@@ -1,0 +1,22 @@
+/* styles.css */
+body {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container1, .container2 {
+  width: 300px;
+  height: 300px;
+  border: 2px solid #000;
+  position: relative;
+  overflow: hidden;
+}
+
+#draggableImage1, #draggableImage2 {
+  position: absolute;
+  width: 100px;
+  cursor: grab;
+}
