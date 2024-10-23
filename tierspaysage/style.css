@@ -16,6 +16,10 @@
   cursor: grab;
 }
 
+#Manifeste_du_Tiers_paysage {
+  pointer-events: none; /* Désactive tous les événements de souris */
+}
+
 
 @font-face {
     font-family: 'DINdong';
