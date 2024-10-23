@@ -113,6 +113,7 @@ a[href^="#"]:hover {
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 a:hover {
@@ -147,9 +148,10 @@ main {
 #edition1 {
     max-width: 100%;  /* Image can be as wide as the container, but no more */
   height: auto;     /* Maintain aspect ratio */
-  max-height: 400px; /* Limits height but keeps proportions */
+  max-height: 350px; /* Limits height but keeps proportions */
     
 }
+
 
 .rectangle {
     width: 100%;
@@ -161,7 +163,12 @@ main {
 }
 
 footer {
-    color: white;
+    color: #ffffff;
     text-align: right;
     padding: 20px;
+}
+
+#contact {
+    color: white;
+    
 }
