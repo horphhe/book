@@ -1,5 +1,13 @@
 // script.js
 
+<script type="text/javascript">
+	$("#flipbook").turn({
+		width: 400,
+		height: 300,
+		autoCenter: true
+	});
+</script>
+
 // Fonction pour rendre une image déplaçable dans un conteneur
 function makeImageDraggable(imageId, containerSelector) {
   const image = document.getElementById(imageId);
