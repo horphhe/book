@@ -1,70 +1,70 @@
 <!DOCTYPE html>
-<html lang="fr"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Images Déplaçables</title>
-  <link rel="stylesheet" href="https://horphhe.github.io/book/tierspaysage/style.css">
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images Déplaçables</title>
+    <link rel="stylesheet" href="https://horphhe.github.io/book/tierspaysage/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="container">
-                <a class="word" href="https://horphhe.github.io/book/index.html">Amelia Pellerin</a>
-                 <a class="word" id="Manifeste_du_Tiers_paysage">Manifeste du Tiers paysage</a>
-            </div> 
-        </nav>
-    </header>
+<header>
+    <nav>
+        <div class="container">
+            <a class="word" href="https://horphhe.github.io/book/index.html">Amelia Pellerin</a>
+            <a class="word" id="Manifeste_du_Tiers_paysage">Manifeste du Tiers paysage</a>
+        </div> 
+    </nav>
+</header>
 
-   
 <main>
-   <div id="flipbook">
+    <div id="flipbook">
         <!-- Chaque "page" du livre -->
-     <div class="turn-page-wrapper" page="1">
-        <div id="page1" class="page">Page 1</div>
-     <img src="https://horphhe.github.io/book/tierspaysage/pages/tiersp_final2_09.png" alt="Page 09" style="width: 100%; height: auto;">
+        <div class="turn-page-wrapper" page="1">
+            <div id="page1" class="page">Page 1</div>
+            <img src="https://horphhe.github.io/book/tierspaysage/pages/tiersp_final2_09.png" alt="Page 09" style="width: 100%; height: auto;">
+        </div>
         <div class="turn-page-wrapper" page="2">
-       <div id="page2" class="page">Page 2</div>
-     <img src="https://horphhe.github.io/book/tierspaysage/pages/tiersp_final2_10.png" alt="Page 10" style="width: 100%; height: auto;">
+            <div id="page2" class="page">Page 2</div>
+            <img src="https://horphhe.github.io/book/tierspaysage/pages/tiersp_final2_10.png" alt="Page 10" style="width: 100%; height: auto;">
+        </div>
         <div class="turn-page-wrapper" page="3">
-          <div id="page3" class="page">Page 3</div>
-     <img src="https://horphhe.github.io/book/tierspaysage/pages/tiersp_final2_11.png" alt="Page 11" style="width: 100%; height: auto;">
+            <div id="page3" class="page">Page 3</div>
+            <img src="https://horphhe.github.io/book/tierspaysage/pages/tiersp_final2_11.png" alt="Page 11" style="width: 100%; height: auto;">
+        </div>
         <div class="turn-page-wrapper" page="4">
-          <div id="page4" class="page">Page 4</div>
-     <img src="https://horphhe.github.io/book/tierspaysage/pages/tiersp_final2_12.png" alt="Page 12" style="width: 100%; height: auto;">
+            <div id="page4" class="page">Page 4</div>
+            <img src="https://horphhe.github.io/book/tierspaysage/pages/tiersp_final2_12.png" alt="Page 12" style="width: 100%; height: auto;">
+        </div>
     </div>
 
-    <!-- Script jQuery (assurez-vous que le chemin est correct) -->
+    <!-- Script jQuery -->
     <script src="https://horphhe.github.io/book/tierspaysage/jquery-3.7.1.min.js"></script>
-
-    <!-- Script Turn.js (assurez-vous que le chemin est correct) -->
+    <!-- Script Turn.js -->
     <script src="https://horphhe.github.io/book/tierspaysage/turn.js"></script>
 
     <!-- Initialisation de Turn.js -->
-   <script>
-$(document).ready(function() {
-    $("#flipbook").turn({
-        width: 800,
-        height: 600,
-        autoCenter: true,
-        pages: 60,  // Nombre total de pages
-        when: {
-            turning: function(event, page, view) {
-                // Si la page est vide, charge le contenu
-                if ($("#page" + page).html() === "") {
-                    $("#page" + page).html("<h1>Page " + page + "</h1><p>Contenu chargé dynamiquement pour la page " + page + "</p>");
+    <script>
+        $(document).ready(function() {
+            $("#flipbook").turn({
+                width: 800,
+                height: 600,
+                autoCenter: true,
+                pages: 4,  // Mettre à jour le nombre total de pages
+                when: {
+                    turning: function(event, page, view) {
+                        // Si la page est vide, charge le contenu
+                        if ($("#page" + page).html() === "") {
+                            $("#page" + page).html("<h1>Page " + page + "</h1><p>Contenu chargé dynamiquement pour la page " + page + "</p>");
+                        }
+                    }
                 }
-            }
-        }
-    });
-});
-</script>
-
+            });
+        });
+    </script>
 </main>
 
- <footer id="contact">
-        <p><a id="contact" href="mailto:pellerin.amelia@icloud.com">Contact</a></p>
-    </footer>
-
-
-
-</body></html>
+<footer id="contact">
+    <p><a id="contact" href="mailto:pellerin.amelia@icloud.com">Contact</a></p>
+</footer>
+</body>
+</html>
