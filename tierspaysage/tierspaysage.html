@@ -45,6 +45,10 @@
     <!-- Initialisation de Turn.js -->
     <script>
         $(document).ready(function() {
+            // Vider le contenu existant du flipbook avant de réinitialiser
+            $("#flipbook").empty();  // Ajoutez cette ligne avant l'initialisation
+
+            // Initialisation de Turn.js
             $("#flipbook").turn({
                 width: 800,
                 height: 600,
