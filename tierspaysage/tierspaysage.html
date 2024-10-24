@@ -50,27 +50,27 @@
 
     <!-- Initialisation de Turn.js -->
     <script>
-    $(document).ready(function() {
-        $("#flipbook").turn({
-            width: 714,
-            height: 566,
-            autoCenter: true,
-            cover: true // Active la couverture rigide
-            when: {
-                turning: function(event, page, view) {
-                    console.log("Turning to page " + page);
+   $(document).ready(function() {
+    $("#flipbook").turn({
+        width: 714,
+        height: 566,
+        autoCenter: true,
+        cover: true,
+        when: {
+            turning: function(event, page, view) {
+                console.log("Turning to page " + page);
+
+                // Ajuster le style de la couverture en fonction de la page actuelle
+                if (page === 1 || page === $("#flipbook").turn("pages")) {
+                    $(".cover-page").css('z-index', 10); // Donner plus de priorité aux couvertures
+                } else {
+                    $(".cover-page").css('z-index', 2); // Normaliser les autres pages
                 }
             }
-        });
-
-        // Ajout de rigidité aux pages de couverture
-        $(".cover-page").each(function() {
-            $(this).css({
-                'transform': 'rotateY(0deg)',  // Garde les couvertures rigides
-                'transform-origin': 'left center'
-            });
-        });
+        }
     });
+});
+
     </script>
 
 </main>
