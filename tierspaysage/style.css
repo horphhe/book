@@ -18,8 +18,8 @@
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 20px; /* Ajuste la largeur de l'ombre à gauche */
-    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)); /* Ombre dégradée à gauche */
+    width: 16px; /* Ajuste la largeur de l'ombre à gauche */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0)); /* Ombre dégradée à gauche */
     left: 0; /* Place l'ombre à gauche de la page */
     z-index: 1; /* S'assure que l'ombre est visible au-dessus des pages */
     pointer-events: none; /* Garde la page interactive */
@@ -31,7 +31,7 @@
     top: 0;
     bottom: 0;
     width: 20px; /* Ajuste la largeur de l'ombre à droite */
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)); /* Ombre dégradée à droite */
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0)); /* Ombre dégradée à droite */
     right: 0; /* Place l'ombre à droite de la page */
     z-index: 1; /* S'assure que l'ombre est visible au-dessus des pages */
     pointer-events: none; /* Garde la page interactive */
