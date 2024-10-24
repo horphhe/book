@@ -18,7 +18,12 @@
 
 <main>
     <div id="flipbook">
-        <!-- Les pages du livre -->
+        <!-- Couverture avant rigide -->
+        <div class="page cover-page" id="cover-front">
+            <img src="https://horphhe.github.io/book/tierspaysage/pages/cover_front.png" alt="Couverture Avant" style="width: 100%; height: auto;">
+        </div>
+
+        <!-- Pages du livre -->
         <div class="page" id="page1">
             <img src="https://horphhe.github.io/book/tierspaysage/pages/tiersp_final2_09.png" alt="Page 09" style="width: 100%; height: auto;">
         </div>
@@ -31,6 +36,11 @@
         <div class="page" id="page4">
             <img src="https://horphhe.github.io/book/tierspaysage/pages/tiersp_final2_12.png" alt="Page 12" style="width: 100%; height: auto;">
         </div>
+
+        <!-- Couverture arrière rigide -->
+        <div class="page cover-page" id="cover-back">
+            <img src="https://horphhe.github.io/book/tierspaysage/pages/cover_back.png" alt="Couverture Arrière" style="width: 100%; height: auto;">
+        </div>
     </div>
 
     <!-- Script jQuery -->
@@ -38,22 +48,29 @@
     <!-- Script Turn.js -->
     <script src="https://horphhe.github.io/book/tierspaysage/turn.js"></script>
 
-   <!-- Initialisation de Turn.js -->
-<script>
-    $(document).ready(function() { // Ajout de l'initialisation de document
+    <!-- Initialisation de Turn.js -->
+    <script>
+    $(document).ready(function() {
         $("#flipbook").turn({
-            width: 714,       // Deux pages côte à côte (357 * 2)
-            height: 566,      // Hauteur correspondant à la proportion
+            width: 714,
+            height: 566,
             autoCenter: true,
-            pages: 4,         // Le nombre total de pages
             when: {
                 turning: function(event, page, view) {
                     console.log("Turning to page " + page);
                 }
             }
         });
+
+        // Ajout de rigidité aux pages de couverture
+        $(".cover-page").each(function() {
+            $(this).css({
+                'transform': 'rotateY(0deg)',  // Garde les couvertures rigides
+                'transform-origin': 'left center'
+            });
+        });
     });
-</script>
+    </script>
 
 </main>
 
