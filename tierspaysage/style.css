@@ -9,13 +9,15 @@
     width: 100%; /* Prend toute la largeur du conteneur */
     height: 100%; /* Prend toute la hauteur du conteneur */
     background: #fff; /* Couleur de fond de la page */
-    border: 1px solid #ccc; /* Bordure de la page */
+    border: none; /* Bordure de la page */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Ombre autour de la page */
     position: absolute; /* Positionnement absolu pour le retournement */
     overflow: hidden; /* Cache le débordement de contenu */
      display: flex;            /* Centrage du contenu de la page */
     align-items: center;      /* Centrage vertical */
     justify-content: center;  /* Centrage horizontal */
+    margin: 0;     /* Supprime les marges entre les pages */
+    padding: 0;  
 }
 
 .page:nth-child(odd) {
