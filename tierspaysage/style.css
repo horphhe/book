@@ -1,6 +1,6 @@
 #book {
-    width: 600px; /* Largeur du livre */
-    height: 400px; /* Hauteur du livre */
+    width: 315px; /* Largeur du livre */
+    height: 250px; /* Hauteur du livre */
     margin: 50px auto; /* Centre le livre */
     position: relative; /* Positionnement relatif pour les pages */
 }
