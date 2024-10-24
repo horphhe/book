@@ -38,21 +38,23 @@
     <!-- Script Turn.js -->
     <script src="https://horphhe.github.io/book/tierspaysage/turn.js"></script>
 
-    <!-- Initialisation de Turn.js -->
-    <script>
+   <!-- Initialisation de Turn.js -->
+<script>
+    $(document).ready(function() { // Ajout de l'initialisation de document
         $("#flipbook").turn({
-    width: 714,       // Deux pages côte à côte (357 * 2)
-    height: 566,      // Hauteur correspondant à la proportion
-    autoCenter: true,
-    pages: 4,  // Le nombre total de pages
-                when: {
-                    turning: function(event, page, view) {
-                        console.log("Turning to page " + page);
-                    }
+            width: 714,       // Deux pages côte à côte (357 * 2)
+            height: 566,      // Hauteur correspondant à la proportion
+            autoCenter: true,
+            pages: 4,         // Le nombre total de pages
+            when: {
+                turning: function(event, page, view) {
+                    console.log("Turning to page " + page);
                 }
-            });
+            }
         });
-    </script>
+    });
+</script>
+
 </main>
 
 <footer id="contact">
