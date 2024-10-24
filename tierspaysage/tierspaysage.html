@@ -40,13 +40,11 @@
 
     <!-- Initialisation de Turn.js -->
     <script>
-        $(document).ready(function() {
-            // Initialisation du flipbook avec Turn.js
-            $("#flipbook").turn({
-                width: 800,
-                height: 600,
-                autoCenter: true,
-                pages: 4,  // Le nombre total de pages
+        $("#flipbook").turn({
+    width: 714,       // Deux pages côte à côte (357 * 2)
+    height: 566,      // Hauteur correspondant à la proportion
+    autoCenter: true,
+    pages: 4,  // Le nombre total de pages
                 when: {
                     turning: function(event, page, view) {
                         console.log("Turning to page " + page);
