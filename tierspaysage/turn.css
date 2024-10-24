@@ -4,10 +4,15 @@ body {
 }
 
 #book {
-    width: 600px; /* Largeur du livre */
-    height: 400px; /* Hauteur du livre */
+    width: 400px; /* Largeur du livre */
+    height: 600px; /* Hauteur du livre */
     margin: 50px auto; /* Centre le livre */
     position: relative; /* Positionnement relatif pour les pages */
+}
+
+.turn-page {
+  width: 400px;
+  height: 600px;
 }
 
 .page {
