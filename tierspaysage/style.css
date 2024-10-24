@@ -13,11 +13,23 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Ombre autour de la page */
     position: absolute; /* Positionnement absolu pour le retournement */
     overflow: hidden; /* Cache le débordement de contenu */
+     display: flex;            /* Centrage du contenu de la page */
+    align-items: center;      /* Centrage vertical */
+    justify-content: center;  /* Centrage horizontal */
 }
 
 .page:nth-child(odd) {
     background: #eaeaea; /* Couleur alternative pour les pages impaires */
 }
+
+/* Style des images dans les pages */
+.page img {
+    width: 100%;              /* L'image occupe toute la largeur disponible */
+    height: 100%;             /* L'image occupe toute la hauteur disponible */
+    object-fit: cover;        /* L'image remplit la page sans être déformée */
+    display: block;           /* Évite les marges supplémentaires dues à l'image inline */
+}
+
 
 .container1, .container2 {
   height: 400px;
