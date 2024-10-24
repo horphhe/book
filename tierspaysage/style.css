@@ -63,9 +63,6 @@
     height: 100%;             /* L'image occupe toute la hauteur disponible */
     object-fit: cover;        /* L'image remplit la page sans être déformée */
     display: block;           /* Évite les marges supplémentaires dues à l'image inline */
-    image-rendering: -webkit-optimize-contrast; /* Pour Chrome/Safari */
-    image-rendering: crisp-edges; /* Pour Firefox */
-    image-rendering: pixelated; /* Pour IE */
 }
 
 
