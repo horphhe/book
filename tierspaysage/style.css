@@ -66,6 +66,25 @@
 }
 
 
+.content {
+    display: flex;
+    align-items: flex-end; /* Alignement du texte en bas */
+}
+
+.text-box {
+    max-width: 30%; /* Taille du conteneur texte */
+    margin-left: 10px; /* Espace entre l'image et le texte */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end; /* Alignement du texte en bas */
+}
+
+.text-box p {
+    color : white;
+    padding: 10px;
+}
+
+
 .container1, .container2 {
   height: 400px;
   position: relative;
