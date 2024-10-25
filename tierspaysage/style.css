@@ -81,7 +81,7 @@
 
 .text-box p {
     color : white;
-    padding: 10px;
+    padding : 10px;
 }
 
 
@@ -96,24 +96,6 @@
     width: 100%; /* Prend toute la largeur du header */
 }
 
-
-.content {
-    display: flex;
-    align-items: flex-end; /* Alignement du texte en bas */
-}
-
-.text-box {
-    max-width: 30%; /* Taille du conteneur texte */
-    margin-left: 10px; /* Espace entre l'image et le texte */
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end; /* Alignement du texte en bas */
-}
-
-.text-box p {
-    color : white;
-    padding: 10px;
-}
 
 #draggableImage1, #draggableImage2 {
   position: absolute;
